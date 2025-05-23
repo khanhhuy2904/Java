@@ -1,9 +1,32 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Subject {
     private static int numCode = 1;
     private String nameSubject;
     private String codeSubject;
     private int maxStudent;
     private int credit;
+    private Teacher teacher;
+
+    public Teacher getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
+    }
+    private List<Student> studentList = new ArrayList<>();
+
+    public List<Student> getStudentList() {
+        return studentList;
+    }
+
+    public void addStudent(Student student) {
+        studentList.add(student);
+    }
+
+
 
     public Subject(String nameSubject, int maxStudent, int credit){
         this.nameSubject = nameSubject;
@@ -46,5 +69,15 @@ public class Subject {
 
     public void setCredit(int credit) {
         this.credit = credit;
+    }
+
+    @Override
+    public String toString() {
+        return "Subject{" +
+                ", codeSubject='" + codeSubject + '\'' +
+                "nameSubject='" + nameSubject + '\'' +
+                ", maxStudent=" + maxStudent +
+                ", credit=" + credit +
+                '}';
     }
 }

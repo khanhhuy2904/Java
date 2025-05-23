@@ -87,4 +87,17 @@ public class Teacher {
     public void setLevel(List<String> level) {
         this.level = level;
     }
+
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "nameTeacher='" + nameTeacher + '\'' +
+                ", codeTeacher='" + codeTeacher + '\'' +
+                ", gender='" + gender + '\'' +
+                ", birthDay=" + birthDay +
+                ", experienceYear=" + experienceYear +
+                ", major=" + major +
+                ", level=" + level +
+                '}';
+    }
 }
